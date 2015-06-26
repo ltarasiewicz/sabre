@@ -5,6 +5,11 @@ namespace Roots\Sage\Extras;
 use Roots\Sage\Config;
 
 /**
+ * Include the redux framework
+ */
+require_once (dirname(__FILE__) . '/redux/sample/barebones-config-legacy.php');
+
+/**
  * Add <body> classes
  */
 function body_class($classes) {

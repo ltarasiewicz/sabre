@@ -1,12 +1,7 @@
-<header class="banner" role="banner">
-  <div class="container">
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-    <nav role="navigation">
-      <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-      endif;
-      ?>
-    </nav>
-  </div>
-</header>
+<?php use Roots\Sage\Nav\NavWalker; ?>
+
+<?php
+global $query_string;
+var_dump($query_string);
+$site = Timber::get_context();
+Timber::render('header.twig', $site);
