@@ -2,6 +2,12 @@
 
 <?php
 global $query_string;
-var_dump($query_string);
+$hasTitleStrap = ! is_front_page(); // title strap displayed everywhere but on the HP
 $site = Timber::get_context();
-Timber::render('header.twig', $site);
+$context['site'] = $site;
+$context['hasTitleStrap'] = $hasTitleStrap;
+$context['homePage'] = false;
+if (is_front_page()) {
+    $context['homePage'] = get_post();
+}
+Timber::render('header.twig', $context);

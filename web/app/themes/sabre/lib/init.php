@@ -18,6 +18,8 @@ function setup()
     add_theme_support('title-tag');
 
     add_theme_support('custom-header');
+    add_post_type_support( 'page', 'excerpt' );
+
 
     // Register wp_nav_menu() menus
     // http://codex.wordpress.org/Function_Reference/register_nav_menus

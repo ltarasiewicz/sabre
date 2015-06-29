@@ -1,0 +1,34 @@
+/* Front page */
+
+#sabre {
+
+  div#brands-strap {
+
+    overflow: hidden;
+    height: 60px;
+  }
+
+  div#brands-strap ul {
+
+    list-style: none;
+
+    li {
+
+      float: left;
+
+    }
+
+  }
+
+  div.generic-page {
+    background-color: #000;
+    color: #cfcec3;
+    text-align: center;
+
+    .generic-content {
+      padding: 15px 85px 27px;
+    }
+
+  }
+
+}

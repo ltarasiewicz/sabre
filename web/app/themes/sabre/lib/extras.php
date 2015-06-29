@@ -25,6 +25,7 @@ function body_class($classes) {
     $classes[] = 'sidebar-primary';
   }
 
+
   return $classes;
 }
 add_filter('body_class', __NAMESPACE__ . '\\body_class');
