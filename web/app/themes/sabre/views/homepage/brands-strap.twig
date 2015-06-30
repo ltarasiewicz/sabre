@@ -1,7 +1,7 @@
 <div id="brands-strap">
     <ul>
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
+        {% for brand in brands %}
+        <li><img src="{{ brand.thumbnail.src }}" /></li>
+        {% endfor %}
     </ul>
 </div>

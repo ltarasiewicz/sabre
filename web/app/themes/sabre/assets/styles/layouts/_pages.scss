@@ -6,22 +6,34 @@
 
     overflow: hidden;
     height: 60px;
+    text-align: center;
+    
   }
 
   div#brands-strap ul {
 
     list-style: none;
+    overflow: hidden;
+    height: 60px;
+    padding: 0;
 
     li {
-
-      float: left;
+        
+        line-height: 60px;
+        margin: 0 10px;
+        display: inline;
+        
+        img {
+            display: inline-block;
+            vertical-align: middle;
+        }
 
     }
 
   }
 
   div.generic-page {
-    background-color: #000;
+    background-color: #333;
     color: #cfcec3;
     text-align: center;
 
