@@ -64,9 +64,15 @@
                             'compiler' => 'true',
                         ),
                         array(
-                            'id'       => 'address-1-address',
-                            'type'     => 'textarea',
-                            'title'    => 'Address',
+                            'id'       => 'address-1-address-line-1',
+                            'type'     => 'text',
+                            'title'    => 'Address, line 1',
+                            'compiler' => 'true',
+                        ),
+                        array(
+                            'id'       => 'address-1-address-line-2',
+                            'type'     => 'text',
+                            'title'    => 'Address, line 2',
                             'compiler' => 'true',
                         ),
                         array(
@@ -97,9 +103,15 @@
                             'compiler' => 'true',
                         ),
                         array(
-                            'id'       => 'address-2-address',
-                            'type'     => 'textarea',
-                            'title'    => 'Address',
+                            'id'       => 'address-2-address-line-1',
+                            'type'     => 'text',
+                            'title'    => 'Address, line 1',
+                            'compiler' => 'true',
+                        ),
+                        array(
+                            'id'       => 'address-2-address-line-2',
+                            'type'     => 'text',
+                            'title'    => 'Address, line 2',
                             'compiler' => 'true',
                         ),
                         array(

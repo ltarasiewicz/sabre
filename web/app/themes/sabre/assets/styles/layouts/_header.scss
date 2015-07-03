@@ -6,10 +6,16 @@
 
   .navbar {
     margin-bottom: 0;
+    border: none; // reset navbar border styles
+    border-bottom: 3px solid #fff;
   }
 
   div[id^="metaslider"] {
     margin-bottom: 0;
+  }
+
+  .navbar-brand {
+    padding: 15px 50px
   }
 
 }
