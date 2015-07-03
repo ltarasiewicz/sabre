@@ -1,4 +1,7 @@
 <?php
+/*
+ * Template Name: Homepage
+ */
     $context = [];
     $context['about_page'] = new TimberPost(get_page_by_title('About'));
     $context['education_page'] = new TimberPost(get_page_by_title('Education'));

@@ -52,24 +52,67 @@
 
                 // ACTUAL DECLARATION OF SECTIONS
                 $this->sections[] = array(
-                    'title'  => __( 'Home Settings', 'redux-framework-demo' ),
+                    'title'  => __( 'Address 1', 'redux-framework-demo' ),
                     'desc'   => __( 'These fields can be fully translated by WPML (WordPress Multi-Language). This serves as an example for you to implement. For extra details look at our <a href="http://docs.reduxframework.com/core/advanced/wpml-integration/" target="_blank">WPML Implementation</a> documentation.', 'redux-framework-demo' ),
                     'icon'   => 'el el-home',
                     // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
                     'fields' => array(
-
                         array(
-                            'id'       => 'textid',
+                            'id'       => 'address-1-country',
                             'type'     => 'text',
-                            'title'    => __( 'Example Text', 'redux-framework-demo' ),
+                            'title'    => 'Country',
                             'compiler' => 'true',
-                            // Can be set to false to allow any media type, or can also be set to any mime type.
-                            'desc'     => __( 'Example description.', 'redux-framework-demo' ),
-                            'subtitle' => __( 'Example subtitle.', 'redux-framework-demo' ),
-                            'hint'     => array(
-                                //'title'     => '',
-                                'content' => 'This is a <b>hint</b> tool-tip for the webFonts field.<br/><br/>Add any HTML based text you like here.',
-                            )
+                        ),
+                        array(
+                            'id'       => 'address-1-address',
+                            'type'     => 'textarea',
+                            'title'    => 'Address',
+                            'compiler' => 'true',
+                        ),
+                        array(
+                            'id'       => 'address-1-telephone',
+                            'type'     => 'text',
+                            'title'    => 'Tepehone no.',
+                            'compiler' => 'true',
+                        ),
+                        array(
+                            'id'       => 'address-1-email',
+                            'type'     => 'text',
+                            'title'    => 'Email',
+                            'compiler' => 'true',
+                        ),
+                    )
+                );
+
+                $this->sections[] = array(
+                    'title'  => __( 'Address 2', 'redux-framework-demo' ),
+                    'desc'   => __( 'These fields can be fully translated by WPML (WordPress Multi-Language). This serves as an example for you to implement. For extra details look at our <a href="http://docs.reduxframework.com/core/advanced/wpml-integration/" target="_blank">WPML Implementation</a> documentation.', 'redux-framework-demo' ),
+                    'icon'   => 'el el-home',
+                    // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
+                    'fields' => array(
+                        array(
+                            'id'       => 'address-2-country',
+                            'type'     => 'text',
+                            'title'    => 'Country',
+                            'compiler' => 'true',
+                        ),
+                        array(
+                            'id'       => 'address-2-address',
+                            'type'     => 'textarea',
+                            'title'    => 'Address',
+                            'compiler' => 'true',
+                        ),
+                        array(
+                            'id'       => 'address-2-telephone',
+                            'type'     => 'text',
+                            'title'    => 'Tepehone no.',
+                            'compiler' => 'true',
+                        ),
+                        array(
+                            'id'       => 'address-1-email',
+                            'type'     => 'text',
+                            'title'    => 'Email',
+                            'compiler' => 'true',
                         ),
                     )
                 );
@@ -131,7 +174,7 @@
 
                 $this->args = array(
                     // TYPICAL -> Change these values as you need/desire
-                    'opt_name'           => 'redux_demo',
+                    'opt_name'           => 'sabre_redux',
                     // This is where your data is stored in the database and also becomes your global variable name.
                     'display_name'       => $theme->get( 'Name' ),
                     // Name that appears at the top of your panel
@@ -141,8 +184,8 @@
                     //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
                     'allow_sub_menu'     => true,
                     // Show the sections below the admin menu item or not
-                    'menu_title'         => __( 'Sample Options', 'redux-framework-demo' ),
-                    'page_title'         => __( 'Sample Options', 'redux-framework-demo' ),
+                    'menu_title'         => __( 'Footer Data', 'redux-framework-demo' ),
+                    'page_title'         => __( 'Footer Data', 'redux-framework-demo' ),
                     // You will need to generate a Google API key to use this feature.
                     // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
                     'google_api_key'     => '',
