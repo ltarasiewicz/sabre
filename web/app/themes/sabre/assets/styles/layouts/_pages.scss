@@ -54,7 +54,73 @@
   }
 
   div.embedded-video {
-    padding: 20px;
+    i {
+      width: 50%;
+      height: 35%;
+      overflow: auto;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      font-size: 60px;
+    }
+  }
+
+  #all-videos {
+    overflow: hidden;
+    padding: 0 30px 30px 30px;
+  }
+
+  #products-slider-wrapper {
+    height: 340px;
+  }
+
+  .metaslider {
+    .caption-wrap {
+      position: inherit;
+      background: none;
+      color: black;
+      .caption {
+        text-align: center;
+      }
+    }
+  }
+
+  #products-slider-wrapper {
+
+    .flex-direction-nav {
+      text-align: center;
+    }
+    .flex-direction-nav a {
+      position: relative;
+      opacity: 1;
+      margin: 0 auto;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+
+    .flex-direction-nav > li {
+      text-align: center;
+      display: inline;
+    }
+
+    .flex-direction-nav .flex-disabled {
+      pointer-events: auto;
+    }
+
+    .flexslider .flex-direction-nav .flex-prev,
+    .flexslider:hover .flex-direction-nav .flex-prev {
+      left: 0;
+    }
+
+    .flexslider .flex-direction-nav .flex-next,
+    .flexslider:hover .flex-direction-nav .flex-next {
+      right: 0;
+    }
+
   }
 
 }

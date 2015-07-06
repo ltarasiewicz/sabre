@@ -130,6 +130,51 @@
                 );
 
                 $this->sections[] = array(
+                    'title'  => __( 'HP Videos', 'redux-framework-demo' ),
+                    'desc'   => __( 'These fields can be fully translated by WPML (WordPress Multi-Language). This serves as an example for you to implement. For extra details look at our <a href="http://docs.reduxframework.com/core/advanced/wpml-integration/" target="_blank">WPML Implementation</a> documentation.', 'redux-framework-demo' ),
+                    'icon'   => 'el el-home',
+                    // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
+                    'fields' => array(
+                        array(
+                            'id'       => 'video-1-src',
+                            'type'     => 'text',
+                            'title'    => 'Video 1 Source',
+                            'compiler' => 'true',
+                        ),
+                        array(
+                            'id'       => 'video-1-caption',
+                            'type'     => 'text',
+                            'title'    => 'Video 1 Caption',
+                            'compiler' => 'true',
+                        ),
+                        array(
+                            'id'       => 'video-2-src',
+                            'type'     => 'text',
+                            'title'    => 'Video 2 Source',
+                            'compiler' => 'true',
+                        ),
+                        array(
+                            'id'       => 'video-2-caption',
+                            'type'     => 'text',
+                            'title'    => 'Video 2 Caption',
+                            'compiler' => 'true',
+                        ),
+                        array(
+                            'id'       => 'video-3-src',
+                            'type'     => 'text',
+                            'title'    => 'Video 3 Source',
+                            'compiler' => 'true',
+                        ),
+                        array(
+                            'id'       => 'video-3-caption',
+                            'type'     => 'text',
+                            'title'    => 'Video 3 Caption',
+                            'compiler' => 'true',
+                        ),
+                    )
+                );
+
+                $this->sections[] = array(
                     'title'  => __( 'WPML Example', 'redux-framework-demo' ),
                     'desc'   => __( 'These fields can be fully translated by WPML (WordPress Multi-Language). This serves as an example for you to implement.', 'redux-framework-demo' ),
                     'icon'   => 'el el-home',
@@ -155,6 +200,8 @@
                         ),
                     )
                 );
+
+
             }
 
             public function setHelpTabs() {
