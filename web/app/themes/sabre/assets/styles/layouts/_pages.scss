@@ -36,9 +36,14 @@
     background-color: #333;
     color: #cfcec3;
     text-align: center;
-
+    &.bordered {
+      border-bottom: 3px solid #fff;
+    }
     .generic-content {
       padding: 15px 85px 27px;
+      a {
+        font-size: 0.95em;
+      }
     }
 
   }

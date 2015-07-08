@@ -7,12 +7,41 @@
   url('../fonts/hvd_fonts_-_brandongrotesque-regular-webfont.svg#brandon_grotesque_regularRg') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'brandon_grotesquemedium';
+  src: url('../fonts/hvd_fonts_-_brandongrotesque-medium-webfont.eot');
+  src: url('../fonts/hvd_fonts_-_brandongrotesque-medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/hvd_fonts_-_brandongrotesque-medium-webfont.woff2') format('woff2'),
+  url('../fonts/hvd_fonts_-_brandongrotesque-medium-webfont.woff') format('woff'),
+  url('../fonts/hvd_fonts_-_brandongrotesque-medium-webfont.ttf') format('truetype'),
+  url('../fonts/hvd_fonts_-_brandongrotesque-medium-webfont.svg#brandon_grotesquemedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
 
 }
 
+body {
+  position: relative;
+  padding-top: 96px;
+}
+
 h1, p {
-  font-family: 'brandon_grotesque_regularRg';
   font-size: 16px;
+  letter-spacing: 2px;
+}
+
+a {
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: 'brandon_grotesque_regularRg';
+}
+
+h1 {
+  font-family: 'brandon_grotesquemedium';
 }
 
 .flex-control-nav.flex-control-paging {

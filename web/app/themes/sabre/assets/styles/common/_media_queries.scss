@@ -1,0 +1,16 @@
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  #sabre {
+    nav {
+      width: 940px;
+      .navbar-nav > li {
+        margin-right: 31px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  nav {
+    width: 720px;
+  }
+}

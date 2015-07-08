@@ -1,7 +1,12 @@
 #sabre {
 
+  nav {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
   .navbar-nav > li {
-    margin-right: 43px;
+    margin-right: 36px;
   }
 
   .navbar-nav > li > a {
