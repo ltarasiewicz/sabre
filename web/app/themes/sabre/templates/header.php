@@ -8,6 +8,7 @@ $context['site'] = $site;
 $context['hasTitleStrap'] = $hasTitleStrap;
 $context['homePage'] = false;
 $context['header_image'] = get_header_image();
+$context['brands'] = Timber::get_posts(array('post_type' => 'brand', 'posts_per_page' => -1));
 if (is_front_page()) {
     $context['homePage'] = get_post();
 }

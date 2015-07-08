@@ -1,7 +1,7 @@
 #sabre {
 
   .navbar-nav > li {
-    margin-right: 52px;
+    margin-right: 43px;
   }
 
   .navbar-nav > li > a {
@@ -27,6 +27,13 @@
     img {
       max-width: 180px;
     }
+  }
+
+  .navbar-default,
+  .navbar-nav>.open>a,
+  .navbar-default .navbar-nav>.open>a:focus,
+  .navbar-default .navbar-nav>.open>a:hover {
+    background-color: #333;
   }
 
 }
