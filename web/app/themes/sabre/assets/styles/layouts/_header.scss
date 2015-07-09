@@ -9,8 +9,11 @@
     margin-right: 36px;
   }
 
+
   .navbar-nav > li > a {
     color: #cfcec3;
+    padding: 7px 14px;
+    margin: 28px 0px;
   }
 
   .navbar-collapse {
@@ -39,6 +42,14 @@
   .navbar-default .navbar-nav>.open>a:focus,
   .navbar-default .navbar-nav>.open>a:hover {
     background-color: #333;
+  }
+  
+  .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav>.active>a,
+  .navbar-default .navbar-nav>.active>a:focus,
+  .navbar-default .navbar-nav>.active>a:hover {
+    background-color: inherit;
+    border: 1px solid white;
   }
 
 }

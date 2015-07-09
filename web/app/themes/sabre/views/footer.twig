@@ -40,9 +40,17 @@
                         <div class="col-sm-6">
                             <div class="row">
                                 <h4>Education</h4>
+                                <ul class="list-unstyled">
+                                    <li>{{ meet_the_team.title }}</li>
+                                </ul>
                             </div>
                             <div class="row">
-                                <h4>Help and sport</h4>
+                                <h4>Help & support</h4>
+                                <ul class="list-unstyled">
+                                    {% for helper_page in helper_pages %}
+                                    <li>{{ helper_page.title }}</li>
+                                    {% endfor %}
+                                </ul>
                             </div>
                         </div>
                     </div>

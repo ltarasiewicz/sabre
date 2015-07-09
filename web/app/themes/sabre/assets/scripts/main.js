@@ -19,6 +19,13 @@
         'common': {
             init: function () {
                 // JavaScript to be fired on all pages
+                var offset = 95;
+
+                $('.navbar li a').click(function(event) {
+                    event.preventDefault();
+                    $($(this).attr('href'))[0].scrollIntoView();
+                    scrollBy(0, -offset);
+                });
             },
             finalize: function () {
                 // JavaScript to be fired on all pages, after page specific JS is fired
@@ -28,7 +35,7 @@
         'home': {
             init: function () {
                 // JavaScript to be fired on the home page
-                console.log('hello');
+
                 $('#video-modal').on('show.bs.modal', function(event) {
                     var video = $(event.relatedTarget);
                     var videoSrc = video.data('src');
