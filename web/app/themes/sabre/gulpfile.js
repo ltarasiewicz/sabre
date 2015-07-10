@@ -228,6 +228,11 @@ gulp.task('images', function() {
 // ### JSHint
 // `gulp jshint` - Lints configuration JSON and project JS.
 gulp.task('jshint', function() {
+
+    var packageJSON = require('./package');
+    var jshintConfig = packageJSON.jshintConfig;
+    jshintConfig.lookup - false;
+
   return gulp.src([
     'bower.json', 'gulpfile.js'
   ].concat(project.js))
