@@ -229,14 +229,14 @@ gulp.task('images', function() {
 // `gulp jshint` - Lints configuration JSON and project JS.
 gulp.task('jshint', function() {
 
-    var packageJSON = require('./package');
+    var packageJSON = require('./package.json');
     var jshintConfig = packageJSON.jshintConfig;
     jshintConfig.lookup = false;
 
   return gulp.src([
     'bower.json', 'gulpfile.js'
   ].concat(project.js))
-    .pipe(jshint(jshintConfig))
+    .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(gulpif(enabled.failJSHint, jshint.reporter('fail')));
 });
