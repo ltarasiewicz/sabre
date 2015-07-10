@@ -4,7 +4,7 @@
  * Contributing Author: Tyler Smith
  */
 
-/*jshint maxerr: 1000 */
+/*jshint maxerr:1000 */
 
 (function ($) {
 
