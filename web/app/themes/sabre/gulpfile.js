@@ -231,12 +231,12 @@ gulp.task('jshint', function() {
 
     var packageJSON = require('./package');
     var jshintConfig = packageJSON.jshintConfig;
-    jshintConfig.lookup - false;
+    jshintConfig.lookup = false;
 
   return gulp.src([
     'bower.json', 'gulpfile.js'
   ].concat(project.js))
-    .pipe(jshint())
+    .pipe(jshint(jshintConfig))
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(gulpif(enabled.failJSHint, jshint.reporter('fail')));
 });
