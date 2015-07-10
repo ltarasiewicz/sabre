@@ -35,7 +35,9 @@
         <!-- /.navbar-collapse -->
     </nav>
     {% if hasTitleStrap %}
-        <p>Title strap</p>
+        <div class="title-strap">
+            <h1>{{ page_title }}</h1>
+        </div>
     {% endif %}
     {{ homePage.metaslider_shortcode|shortcodes }}
 </div><!-- /.container-->

@@ -128,4 +128,22 @@
 
   }
 
+  .brand-slider {
+    width: 63%;
+    text-align: center;
+    .flexslider {
+      margin: 0;
+      border: 0;
+    }
+  }
+  
+  .brand-aside {
+    width: 37%;
+    .brand-aside-content {
+      color: #fff;
+      background-color: #333436;
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
 }

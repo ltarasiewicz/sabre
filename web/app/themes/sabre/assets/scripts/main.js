@@ -20,11 +20,26 @@
             init: function () {
                 // JavaScript to be fired on all pages
                 var offset = 95;
-
                 $('.navbar li a').click(function(event) {
                     event.preventDefault();
                     $($(this).attr('href'))[0].scrollIntoView();
                     scrollBy(0, -offset);
+                });
+
+                $(window).load(function() {
+                    $('.flexslider').flexslider({
+                        slideshowSpeed:3000,
+                        animation:"fade",
+                        controlNav:false,
+                        directionNav:true,
+                        pauseOnHover:true,
+                        direction:"horizontal",
+                        reverse:false,
+                        animationSpeed:600,
+                        prevText:"&lt;",
+                        nextText:"&gt;",
+                        slideshow:false,
+                    });
                 });
             },
             finalize: function () {
@@ -52,6 +67,11 @@
         'about_us': {
             init: function () {
                 // JavaScript to be fired on the about us page
+            }
+        },
+        'single_brand': {
+            init: function () {
+                console.log('brand');
             }
         }
     };

@@ -19,6 +19,7 @@ $sage_includes = [
     'lib/titles.php',                // Page titles
     'lib/extras.php',                // Custom functions
     'lib/metaslider.php',            // Metaslider settings
+    'lib/extensions.php',            // Extensions, custom classes, e.g. Timber Extenstions
 ];
 
 foreach ($sage_includes as $file) {
