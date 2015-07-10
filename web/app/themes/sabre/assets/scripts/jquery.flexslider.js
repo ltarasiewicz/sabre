@@ -3,7 +3,9 @@
  * Copyright 2012 WooThemes
  * Contributing Author: Tyler Smith
  */
-;
+
+/*jshint maxerr: 1000 */
+
 (function ($) {
 
   //FlexSlider: Object Instance
