@@ -1,0 +1,27 @@
+<div class="educators dark">
+    {% for key, educator in educators %}
+    {% set previousCat = attribute(educator, key-1).cateogry %}
+    {% if (loop.index == 1 or educator.category != previousCat) %}
+    <h2>{{ educator.category }}</h2>
+    {% endif %}
+    <div class="educator">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="headshot">
+                    <img src="{{ educator.thumbnail.src|resize(165, 225) }}" class="post-thumb"/>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="description">
+                    {{ educator }}
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="favourite-product">
+                    <img class="img-responsive" src="{{ educator.types('favourite-product') }}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

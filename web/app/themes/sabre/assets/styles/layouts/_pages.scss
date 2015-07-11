@@ -139,11 +139,70 @@
   
   .brand-aside {
     width: 37%;
+    overflow: hidden;
     .brand-aside-content {
       color: #fff;
       background-color: #333436;
       text-align: center;
       padding: 10px 0;
+      height: 100%;
     }
   }
+
+  .row.reduced-padding > .brand-slider {
+    padding-right: 1px;
+  }
+
+  .row.reduced-padding > .brand-aside {
+    padding-left: 1px;
+  }
+
+  .flexslider.brand-products {
+    margin-bottom: 0;
+  }
+
+  .row.bottom > .brand-slider {
+    margin-bottom: 30px;
+  }
+
+  #education-main {
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  .educators {
+    color: #000;
+    background-color: transparent;
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .educators.dark {
+    background-color: #333333;
+    color: #cfcec3;
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .headshot {
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .educators {
+    padding-top: 5px;
+    .educator {
+      padding-bottom: 20px;
+      .favourite-product img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+
 }
