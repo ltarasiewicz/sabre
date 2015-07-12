@@ -5,7 +5,7 @@
                 <div class="col-sm-6">
                     <div class="row">
                         <div class="col-sm-12">
-                            <img src="{{ header_image }}" />
+                            <h3><img src="{{ header_image }}" /></h3>
                         </div>
                     </div>
                     <div class="row">
@@ -14,15 +14,15 @@
                                 <strong>{{ address['address-1-country'] }}</strong><br>
                                 {{ address['address-1-address-line-1'] }}<br>
                                 {{ address['address-1-address-line-2'] }}<br>
-                                <abbr title="Phone">P:</abbr> {{ address['address-1-telephone'] }}
+                                <strong><abbr title="Phone">P: </abbr>{{ address['address-1-telephone'] }}</strong>
                             </address>
                         </div>
-                        <div class="col-sm-6">
-                            <address>
+                        <div class="col-sm-6 bordered">
+                            <address class="">
                                 <strong>{{ address['address-2-country'] }}</strong><br>
                                 {{ address['address-2-address-line-1'] }}<br>
                                 {{ address['address-2-address-line-2'] }}<br>
-                                <abbr title="Phone">P:</abbr> {{ address['address-2-telephone'] }}
+                                <strong><abbr title="Phone">P: </abbr>{{ address['address-2-telephone'] }}</strong>
                             </address>
                         </div>
                     </div>
@@ -30,22 +30,22 @@
                 <div class="col-sm-6">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h4>Our Brands</h4>
+                            <h4 class="text-uppercase"><u>Our Brands</u></h4>
                             <ul class="list-unstyled">
                                 {% for brand in brands %}
-                                <li>{{ brand.title }}</li>
+                                <li><a href="{{ brand.permalink }}">{{ brand.title }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
                         <div class="col-sm-6">
                             <div class="row">
-                                <h4>Education</h4>
+                                <h4 class="text-uppercase"><u>Education</u></h4>
                                 <ul class="list-unstyled">
-                                    <li>{{ meet_the_team.title }}</li>
+                                    <li><a href="{{ educators_page.permalink }}">Meet the Team</a></li>
                                 </ul>
                             </div>
                             <div class="row">
-                                <h4>Help & support</h4>
+                                <h4 class="text-uppercase"><u>Help & support</u></h4>
                                 <ul class="list-unstyled">
                                     {% for helper_page in helper_pages %}
                                     <li>{{ helper_page.title }}</li>

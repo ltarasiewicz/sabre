@@ -14,3 +14,19 @@
     width: 720px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .educator {
+    .description {
+      padding: 0 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .video-group {
+    img {
+      width: 100%;
+    }
+  }
+}

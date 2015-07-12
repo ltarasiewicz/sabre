@@ -14,8 +14,7 @@ $address = function() use ($reduxOptions) {
 $context['address'] = $address();
 $context['header_image'] = get_header_image();
 $context['brands'] = Timber::get_posts(array('post_type' => 'brand'));
-$context['meet_the_team'] = Timber::get_post(62);
 $context['helper_pages'] = Timber::get_posts(array('post_type' => 'page', 'post__in' => array(64, 66)));
-
+$context['educators_page'] = new TimberPost(get_page_by_title('Education'));
 
 Timber::render('footer.twig', $context);

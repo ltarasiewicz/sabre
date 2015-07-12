@@ -2,7 +2,7 @@
 /*
  * Template Name: Homepage
  */
-
+$context = [];
 $reduxOptions = get_option('sabre_redux');
 $video = function() use ($reduxOptions) {
     $arr = [];
@@ -13,8 +13,17 @@ $video = function() use ($reduxOptions) {
     }
     return $arr;
 };
-
 $context['video'] = $video();
+
+preg_match('/embed\/(.+)$/', $context['video']['video-1-src'], $videoOneId);
+preg_match('/embed\/(.+)$/', $context['video']['video-2-src'], $videoTwoId);
+preg_match('/embed\/(.+)$/', $context['video']['video-3-src'], $videoThreeId);
+
+$context['video_1_id'] = $videoOneId[1];
+$context['video_2_id'] = $videoTwoId[1];
+$context['video_3_id'] = $videoThreeId[1];
+
+
 $context['about_page'] = new TimberPost(get_page_by_title('About'));
 $context['education_page'] = new TimberPost(get_page_by_title('Education'));
 $context['brands'] = Timber::get_posts(array('post_type' => 'brand'));

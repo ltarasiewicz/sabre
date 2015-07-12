@@ -23,7 +23,7 @@
                        aria-expanded="false">OUR BRANDS<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         {% for brand in brands %}
-                            <li><a>{{ brand }}</a></li>
+                            <li><a href="{{ brand.permalink }}">{{ brand }}</a></li>
                         {% endfor %}
                     </ul>
                 </li>
@@ -36,7 +36,7 @@
     </nav>
     {% if hasTitleStrap %}
         <div class="title-strap">
-            <h1>{{ page_title }}</h1>
+            <h1 class="text-uppercase">{{ page_title }}</h1>
         </div>
     {% endif %}
     {{ homePage.metaslider_shortcode|shortcodes }}

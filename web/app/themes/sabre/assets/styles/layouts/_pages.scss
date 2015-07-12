@@ -52,7 +52,7 @@
     text-align: center;
     height: 55px;
     background-color: #cfcec3;
-    h1 {
+    h1, h2 {
       line-height: 55px;
       margin: 0;
     }
@@ -61,7 +61,7 @@
   div.embedded-video {
     i {
       width: 50%;
-      height: 35%;
+      height: 38%;
       overflow: auto;
       margin: auto;
       position: absolute;
@@ -193,6 +193,12 @@
     }
   }
 
+  .educators:nth-of-type(2n) {
+      background-color: #333333;
+      color: #cfcec3;
+      margin-top: 60px;
+  }
+
   .educators {
     padding-top: 5px;
     .educator {
@@ -202,7 +208,12 @@
         margin: 0 auto;
       }
     }
+    .artist-educator {
+      padding-bottom: 20px;
+      .favourite-product img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
   }
-
-
 }

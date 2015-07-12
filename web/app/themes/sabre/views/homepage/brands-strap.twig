@@ -1,7 +1,7 @@
 <div id="brands-strap">
     <ul>
         {% for brand in brands %}
-        <li><img src="{{ brand.thumbnail.src }}" /></li>
+        <li><a href="{{ brand.permalink }}"><img src="{{ brand.thumbnail.src }}" /></a></li>
         {% endfor %}
     </ul>
 </div>

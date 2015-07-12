@@ -1,8 +1,19 @@
 div#footer-content {
   background-color: #d8d7cf;
   text-align: center;
+  a {
+    color: #333;
+  }
   img {
     padding: 30px;
     max-width: 180px;
+  }
+  h3 {
+    border-right: 2px solid black;
+    margin-right: -15px;
+    margin-bottom: 0;
+  }
+  .bordered {
+    border-right: 2px solid black;
   }
 }

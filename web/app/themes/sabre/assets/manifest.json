@@ -28,12 +28,6 @@
     },
     "modernizr.js": {
       "bower": ["modernizr"]
-    },
-    "jquery.flexslider.js": {
-      "files": [
-        "scripts/jquery.flexslider.js"
-      ],
-      "main": true
     }
   },
   "config": {

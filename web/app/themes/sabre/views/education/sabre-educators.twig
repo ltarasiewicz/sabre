@@ -1,0 +1,31 @@
+<div class="educators">
+    {% set previousCat = false %}
+    {% for  sabre_educator in sabre_educators %}
+    {% if (previousCat != sabre_educator.category) %}
+    <h2>{{ sabre_educator.category }}</h2>
+    {% endif %}
+    <div class="educator">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="headshot">
+                    <img src="{{ sabre_educator.thumbnail.src|resize(165, 225) }}" class="post-thumb"/>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="description">
+                    <h1 class="text-uppercase">{{ sabre_educator.title }}</h1>
+                    <small>{{ sabre_educator.types('position') }}</small>
+                    {{ sabre_educator.content }}
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="favourite-product">
+                    <img class="img-responsive" src="{{ sabre_educator.types('favourite-product') }}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    {% set previousCat = sabre_educator.category %}
+
+    {% endfor %}
+</div>

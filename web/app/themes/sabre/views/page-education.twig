@@ -1,7 +1,12 @@
 {% include "education/education.twig" %}
-{% include "education/educators.twig" %}
-{% include "education/joico-artists.twig" %}
+{% include "education/sabre-educators.twig" %}
 
-{% if 1 == 1 %}
-{% include "education/fudge-artists.twig" %}
+{% set previousCat = false %}
+{% for  artist_educator in artists_educators %}
+{% if (previousCat != artist_educator.category) %}
+{% set currentCategory = artist_educator.category %}
+{% include "education/artists-educators.twig" %}
+{% set previousCat = artist_educator.category %}
 {% endif %}
+{% endfor %}
+

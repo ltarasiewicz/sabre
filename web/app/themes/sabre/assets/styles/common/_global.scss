@@ -25,9 +25,19 @@
 body {
   position: relative;
   padding-top: 96px;
+  font-family: 'brandon_grotesque_regularRg';
 }
 
-h1, p {
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+h4, p {
   font-size: 16px;
   letter-spacing: 2px;
 }
@@ -36,11 +46,11 @@ a {
   letter-spacing: 1px;
 }
 
-p {
+p, small {
   font-family: 'brandon_grotesque_regularRg';
 }
 
-h1 {
+h1, h2, h4, ul {
   font-family: 'brandon_grotesquemedium';
 }
 

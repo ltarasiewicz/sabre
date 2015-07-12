@@ -18,13 +18,13 @@
         // All pages
         'common': {
             init: function () {
-                // JavaScript to be fired on all pages
-                //var offset = 95;
-                //$(".navbar li a:not(.not-spy)").click(function(event) {
-                //    event.preventDefault();
-                //    $($(this).attr('href'))[0].scrollIntoView();
-                //    scrollBy(0, -offset);
-                //});
+                //JavaScript to be fired on all pages
+                var offset = 95;
+                $(".navbar li a:not(.not-spy)").click(function(event) {
+                    event.preventDefault();
+                    $($(this).attr('href'))[0].scrollIntoView();
+                    scrollBy(0, -offset);
+                });
 
                 $(window).load(function() {
                     $('.flexslider').flexslider({
@@ -50,14 +50,17 @@
         'home': {
             init: function () {
                 // JavaScript to be fired on the home page
-
+                var player;
                 $('#video-modal').on('show.bs.modal', function(event) {
+                    player = new YT.Player('yt-player');
                     var video = $(event.relatedTarget);
                     var videoSrc = video.data('src');
                     var modal = $(this);
-                    modal.find('.embed-responsive-item').attr('src', videoSrc);
+                    modal.find('.embed-responsive-item').attr('src', videoSrc + '?rel=0&wmode=Opaque&enablejsapi=1');
                 });
-
+                $('#video-modal').on('hide.bs.modal', function() {
+                    player.stopVideo();
+                });
             },
             finalize: function () {
                 // JavaScript to be fired on the home page, after the init JS
