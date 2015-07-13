@@ -13,9 +13,7 @@
       "main": true
     },
     "flexslider.css": {
-      "files": [
-        "styles/flexslider.css"
-      ],
+      "files": ["styles/flexslider.css"],
       "main": true
     },
     "editor-style.css": {
@@ -28,6 +26,10 @@
     },
     "modernizr.js": {
       "bower": ["modernizr"]
+    },
+    "jquery.flexslider.js": {
+      "files": ["scripts/jquery.flexslider.js"],
+      "main": true
     }
   },
   "config": {

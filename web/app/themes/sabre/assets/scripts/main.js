@@ -19,28 +19,13 @@
         'common': {
             init: function () {
                 //JavaScript to be fired on all pages
-                var offset = 95;
-                $(".navbar li a:not(.not-spy)").click(function(event) {
-                    event.preventDefault();
-                    $($(this).attr('href'))[0].scrollIntoView();
-                    scrollBy(0, -offset);
-                });
+                //var offset = 95;
+                //$(".navbar li a:not(.not-spy)").click(function(event) {
+                //    event.preventDefault();
+                //    $($(this).attr('href'))[0].scrollIntoView();
+                //    scrollBy(0, -offset);
+                //});
 
-                $(window).load(function() {
-                    $('.flexslider').flexslider({
-                        slideshowSpeed:3000,
-                        animation:"fade",
-                        controlNav:false,
-                        directionNav:true,
-                        pauseOnHover:true,
-                        direction:"horizontal",
-                        reverse:false,
-                        animationSpeed:600,
-                        prevText:"&lt;",
-                        nextText:"&gt;",
-                        slideshow:false,
-                    });
-                });
             },
             finalize: function () {
                 // JavaScript to be fired on all pages, after page specific JS is fired
@@ -74,10 +59,18 @@
         },
         'single_brand': {
             init: function () {
+
+                $(window).load(function() {
+                    $('.flexslider').flexslider({
+                        slideshowSpeed:3000,
+                        animation:"fade",
+
+                    });
+                });
                 var applyHeight = function() {
                     var flexHeight = $(".row.top > .brand-slider").height()
                     $(".row.top > .brand-aside").height(flexHeight);
-                }
+                };
                 $(window).load(function() {
                     applyHeight();
                 });
