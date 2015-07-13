@@ -43,6 +43,9 @@
       padding: 15px 85px 27px;
       a {
         font-size: 0.95em;
+        z-index: 10;
+        position: relative;
+        color: inherit;
       }
     }
 
@@ -70,6 +73,7 @@
       bottom: 0;
       right: 0;
       font-size: 60px;
+      cursor: pointer;
     }
   }
 
@@ -141,7 +145,7 @@
     width: 37%;
     overflow: hidden;
     .brand-aside-content {
-      color: #fff;
+      color: #d0cec2;
       background-color: #333436;
       text-align: center;
       padding: 10px 0;
@@ -173,7 +177,7 @@
   .educators {
     color: #000;
     background-color: transparent;
-    h2 {
+    h1 {
       text-align: center;
     }
   }
@@ -181,7 +185,7 @@
   .educators.dark {
     background-color: #333333;
     color: #cfcec3;
-    h2 {
+    h1 {
       text-align: center;
     }
   }
@@ -201,15 +205,18 @@
 
   .educators {
     padding-top: 5px;
+    h1 {
+      margin-bottom: 50px;
+    }
     .educator {
-      padding-bottom: 20px;
+      padding: 0 30px 30px 30px;
       .favourite-product img {
         display: block;
         margin: 0 auto;
       }
     }
     .artist-educator {
-      padding-bottom: 20px;
+      padding: 0 30px 30px 30px;
       .favourite-product img {
         display: block;
         margin: 0 auto;

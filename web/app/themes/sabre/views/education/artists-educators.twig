@@ -3,7 +3,7 @@
 {% for artist in artists_educators %}
 {% if (currentCategory == artist.category) %}
     {% if currentCategory != previousLocalCat %}
-    <h2>{{ currentCategory}}</h2>
+    <h1 class="text-uppercase">Guest artists for {{ currentCategory}}</h1>
     {% endif %}
     <div class="artist-educator">
         <div class="row">
@@ -14,8 +14,10 @@
             </div>
             <div class="col-sm-6">
                 <div class="description">
-                    <h1 class="text-uppercase">{{ artist.title }}</h1>
-                    <small>{{ artist.types('position') }}</small>
+                    <h2>
+                        <span class="text-uppercase">{{ artist.title }}</span><br/>
+                        <small>{{ artist.types('position') }}</small>
+                    </h2>
                     {{ artist.content }}
                 </div>
             </div>

@@ -5,6 +5,7 @@ global $query_string;
 $hasTitleStrap = ! is_front_page(); // title strap displayed everywhere but on the HP
 $site = Timber::get_context();
 $context['site'] = $site;
+$context['home_url'] = get_home_url();
 $context['hasTitleStrap'] = $hasTitleStrap;
 $context['homePage'] = false;
 $context['educators_page'] = new TimberPost(get_page_by_title('Education'));

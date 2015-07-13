@@ -51,6 +51,22 @@
 
 
                 // ACTUAL DECLARATION OF SECTIONS
+
+                $this->sections[] = array(
+                    'title'  => __( 'Primary Email', 'redux-framework-demo' ),
+                    'desc'   => __( 'These fields can be fully translated by WPML (WordPress Multi-Language). This serves as an example for you to implement. For extra details look at our <a href="http://docs.reduxframework.com/core/advanced/wpml-integration/" target="_blank">WPML Implementation</a> documentation.', 'redux-framework-demo' ),
+                    'icon'   => 'el el-home',
+                    // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
+                    'fields' => array(
+                        array(
+                            'id'       => 'primary-email',
+                            'type'     => 'text',
+                            'title'    => 'Email',
+                            'compiler' => 'true',
+                        )
+                    )
+                );
+
                 $this->sections[] = array(
                     'title'  => __( 'Address 1', 'redux-framework-demo' ),
                     'desc'   => __( 'These fields can be fully translated by WPML (WordPress Multi-Language). This serves as an example for you to implement. For extra details look at our <a href="http://docs.reduxframework.com/core/advanced/wpml-integration/" target="_blank">WPML Implementation</a> documentation.', 'redux-framework-demo' ),
@@ -79,12 +95,6 @@
                             'id'       => 'address-1-telephone',
                             'type'     => 'text',
                             'title'    => 'Tepehone no.',
-                            'compiler' => 'true',
-                        ),
-                        array(
-                            'id'       => 'address-1-email',
-                            'type'     => 'text',
-                            'title'    => 'Email',
                             'compiler' => 'true',
                         ),
                     )
@@ -118,12 +128,6 @@
                             'id'       => 'address-2-telephone',
                             'type'     => 'text',
                             'title'    => 'Tepehone no.',
-                            'compiler' => 'true',
-                        ),
-                        array(
-                            'id'       => 'address-1-email',
-                            'type'     => 'text',
-                            'title'    => 'Email',
                             'compiler' => 'true',
                         ),
                     )

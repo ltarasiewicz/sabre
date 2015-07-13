@@ -1,19 +1,41 @@
 div#footer-content {
   background-color: #d8d7cf;
   text-align: center;
+  padding-bottom: 10px;
   a {
     color: #333;
   }
   img {
-    padding: 30px;
-    max-width: 180px;
+    padding: 30px 30px 15px 30px;
+    max-width: 230px;
   }
   h3 {
-    border-right: 2px solid black;
-    margin-right: -15px;
     margin-bottom: 0;
   }
   .bordered {
     border-right: 2px solid black;
   }
+
+  .footer-logo-group {
+    border-right: 2px solid black;
+    margin-right: -15px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+  }
+
+  .footer-email {
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+  .footer-address-group {
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-right: 2px solid black;
+  }
+
+  .footer-right {
+    padding-top: 40px;
+  }
+
 }

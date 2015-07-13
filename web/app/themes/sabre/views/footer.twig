@@ -5,29 +5,34 @@
                 <div class="col-sm-6">
                     <div class="row">
                         <div class="col-sm-12">
-                            <h3><img src="{{ header_image }}" /></h3>
+                            <div class="footer-logo-group">
+                                <h3><img src="{{ header_image }}" /></h3>
+                                <span class="footer-email"><strong>{{ address['primary-email'] }}</strong></span>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
-                            <address>
-                                <strong>{{ address['address-1-country'] }}</strong><br>
-                                {{ address['address-1-address-line-1'] }}<br>
-                                {{ address['address-1-address-line-2'] }}<br>
-                                <strong><abbr title="Phone">P: </abbr>{{ address['address-1-telephone'] }}</strong>
-                            </address>
-                        </div>
-                        <div class="col-sm-6 bordered">
-                            <address class="">
-                                <strong>{{ address['address-2-country'] }}</strong><br>
-                                {{ address['address-2-address-line-1'] }}<br>
-                                {{ address['address-2-address-line-2'] }}<br>
-                                <strong><abbr title="Phone">P: </abbr>{{ address['address-2-telephone'] }}</strong>
-                            </address>
+                        <div class="footer-address-group">
+                            <div class="col-sm-6">
+                                <address>
+                                    <strong>{{ address['address-1-country'] }}</strong><br>
+                                    {{ address['address-1-address-line-1'] }}<br>
+                                    {{ address['address-1-address-line-2'] }}<br>
+                                    <strong><abbr title="Phone">P: </abbr>{{ address['address-1-telephone'] }}</strong>
+                                </address>
+                            </div>
+                            <div class="col-sm-6">
+                                <address class="">
+                                    <strong>{{ address['address-2-country'] }}</strong><br>
+                                    {{ address['address-2-address-line-1'] }}<br>
+                                    {{ address['address-2-address-line-2'] }}<br>
+                                    <strong><abbr title="Phone">P: </abbr>{{ address['address-2-telephone'] }}</strong>
+                                </address>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 footer-right">
                     <div class="row">
                         <div class="col-sm-6">
                             <h4 class="text-uppercase"><u>Our Brands</u></h4>
@@ -48,7 +53,7 @@
                                 <h4 class="text-uppercase"><u>Help & support</u></h4>
                                 <ul class="list-unstyled">
                                     {% for helper_page in helper_pages %}
-                                    <li>{{ helper_page.title }}</li>
+                                    <li><a href="{{ helper_page.permalink }}">{{ helper_page.title }}</a></li>
                                     {% endfor %}
                                 </ul>
                             </div>

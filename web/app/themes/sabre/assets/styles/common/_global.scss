@@ -37,12 +37,12 @@ h2 {
   letter-spacing: 2px;
 }
 
-h4, p {
+h4 {
   font-size: 16px;
   letter-spacing: 2px;
 }
 
-a {
+a, p {
   letter-spacing: 1px;
 }
 
@@ -50,11 +50,29 @@ p, small {
   font-family: 'brandon_grotesque_regularRg';
 }
 
+
+
 h1, h2, h4, ul {
   font-family: 'brandon_grotesquemedium';
+  small {
+    color: inherit;
+  }
+}
+
+.hr {
+  width:3px;
+  height:100%;
+  background-color:#000000;
 }
 
 .flex-control-nav.flex-control-paging {
   display: none;
 }
 
+h2 > a.anchor {
+  padding-top: 110px;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}

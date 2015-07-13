@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{ home_url }}">
                 <img src="{{ header_image }}" />
             </a>
         </div>
@@ -17,7 +17,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#about">ABOUT</a></li>
+                <li><a href="{{ home_url }}#about">ABOUT</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle not-spy" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">OUR BRANDS<span class="caret"></span></a>
@@ -27,9 +27,9 @@
                         {% endfor %}
                     </ul>
                 </li>
-                <li><a href="#education">EDUCATION</a></li>
-                <li><a href="#media">MEDIA</a></li>
-                <li><a href="#videos">VIDEOS</a></li>
+                <li><a href="{{ educators_page.permalink }}">EDUCATION</a></li>
+                <li><a href="{{ home_url }}#media">MEDIA</a></li>
+                <li><a href="{{ home_url }}#videos">VIDEOS</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -41,4 +41,3 @@
     {% endif %}
     {{ homePage.metaslider_shortcode|shortcodes }}
 </div><!-- /.container-->
-

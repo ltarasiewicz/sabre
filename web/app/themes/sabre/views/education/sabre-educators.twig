@@ -2,7 +2,7 @@
     {% set previousCat = false %}
     {% for  sabre_educator in sabre_educators %}
     {% if (previousCat != sabre_educator.category) %}
-    <h2>{{ sabre_educator.category }}</h2>
+    <h1 class="text-uppercase">Educators</h1>
     {% endif %}
     <div class="educator">
         <div class="row">
@@ -13,8 +13,10 @@
             </div>
             <div class="col-sm-6">
                 <div class="description">
-                    <h1 class="text-uppercase">{{ sabre_educator.title }}</h1>
-                    <small>{{ sabre_educator.types('position') }}</small>
+                    <h2>
+                        <span class="text-uppercase">{{ sabre_educator.title }}</span><br/>
+                        <small>{{ sabre_educator.types('position') }}</small>
+                    </h2>
                     {{ sabre_educator.content }}
                 </div>
             </div>

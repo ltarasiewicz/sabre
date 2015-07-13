@@ -21,6 +21,10 @@
       padding: 0 20px;
     }
   }
+  div#footer-content .footer-logo-group,
+  div#footer-content .footer-address-group {
+    border-right: 0;
+  }
 }
 
 @media screen and (max-width: 992px) {

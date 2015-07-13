@@ -64,6 +64,8 @@
                     $('.flexslider').flexslider({
                         slideshowSpeed:3000,
                         animation:"fade",
+                        prevText: '',
+                        nextText: ''
 
                     });
                 });
