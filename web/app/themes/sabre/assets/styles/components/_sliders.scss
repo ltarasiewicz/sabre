@@ -32,3 +32,58 @@
 //#metaslider_51.flexslider img{
 //  cursor:pointer;
 //}
+
+#metaslider_21 {
+
+  .flex-direction-nav {
+    a {
+      height: 50px;
+      background: url(../images/left.png) no-repeat;
+    }
+    a.flex-next {
+      background: url(../images/right.png) no-repeat;
+    }
+
+    .flex-prev {
+      left: 10px;
+      opacity: 1;
+      top: 90%;
+    }
+
+    .flex-next {
+      opacity: 1;
+      top: 90%;
+      left: 65px;
+    }
+  }
+
+
+  .flex-control-nav {
+    bottom: 7%;
+    li {
+      vertical-align: middle;
+    }
+  }
+  .flex-control-nav.flex-control-paging {
+    display: block;
+    z-index: 999;
+    text-align: left;
+    left: 12%;
+  }
+
+
+  .flex-control-paging li a {
+    width: 5px;
+    height: 5px;
+    background-color: #CFCEC3;
+    &.flex-active {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  .flex-control-paging li a.flex-active {
+    width: 10px;
+    height: 10px;
+  }
+}
