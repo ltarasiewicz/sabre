@@ -43,9 +43,61 @@
                     var modal = $(this);
                     modal.find('.embed-responsive-item').attr('src', videoSrc + '?rel=0&wmode=Opaque&enablejsapi=1');
                 });
+
                 $('#video-modal').on('hide.bs.modal', function() {
                     player.stopVideo();
                 });
+
+                $(document).ready(function() {
+                    $('#homepage-media-slider').addClass('flexslider');
+                    $('#homepage-media-slider').flexslider({
+                        slideshowSpeed:3000,
+                        animation:'slide',
+                        controlNav:false,
+                        directionNav:true,
+                        pauseOnHover:true,
+                        direction:'horizontal',
+                        reverse:false,
+                        animationSpeed:600,
+                        prevText:"&lt;",
+                        nextText:"&gt;",
+                        easing:"linear",
+                        slideshow:false,
+                        maxItems:3,
+                        itemWidth:180,
+                        minItems:1,
+                        itemMargin:100
+                    });
+                });
+
+                //$("#homepage-media-slider li > img").on('mouseenter', function() {
+                //    var ele = $(this);
+                //    var eleSrc = $(this).attr('src');
+                //    var overleafImage = $(this).attr('data-overleaf');
+                //    ele.attr('src', overleafImage);
+                //    ele.attr('data-overleaf', eleSrc);
+                //}).on('mouseleave', function() {
+                //    var ele = $(this);
+                //    var eleSrc = $(this).attr('src');
+                //    var overleafImage = $(this).attr('data-overleaf');
+                //    ele.attr('src', overleafImage);
+                //    ele.attr('data-overleaf', eleSrc);
+                //});
+
+                $("#homepage-media-slider li img").on('mouseenter mouseleave', function(e) {
+                    var ele = $(this);
+                    var eleSrc = $(this).attr('src');
+                    var overleafImage = $(this).attr('data-overleaf');
+                    if (e.type === "mouseenter" && overleafImage) {
+                        ele.attr('src', overleafImage);
+                        ele.attr('data-overleaf', eleSrc);
+                    } else if (e.type === "mouseleave" && overleafImage) {
+                        ele.attr('src', overleafImage);
+                        ele.attr('data-overleaf', eleSrc);
+                    }
+                });
+
+
             },
             finalize: function () {
                 // JavaScript to be fired on the home page, after the init JS

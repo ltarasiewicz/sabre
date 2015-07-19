@@ -77,6 +77,10 @@
     }
   }
 
+  .video-caption {
+    margin-top: 15px;
+  }
+
   #all-videos {
     overflow: hidden;
     padding: 0 30px 30px 30px;
@@ -86,14 +90,38 @@
     height: 340px;
   }
 
+
+  #homepage-media-slider.flexslider {
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    .slides li {
+      margin-right: 100px !important;
+      .cover-image-wrapper {
+        height: 338px;
+        overflow: hidden;
+      }
+    }
+  }
+
+
+
+  #homepage-media-slider,
   .metaslider {
     .caption-wrap {
       position: inherit;
       background: none;
       color: black;
+      margin: 15px 0;
       .caption {
         text-align: center;
       }
+    }
+  }
+
+  #homepage-media-slider {
+    .caption-wrap {
+
     }
   }
 
@@ -156,6 +184,9 @@
       text-align: center;
       padding: 10px 0;
       height: 100%;
+      a {
+        color: inherit;
+      }
     }
   }
 
@@ -221,4 +252,12 @@
       }
     }
   }
+
+  .modal-content {
+    border-radius: 0;
+    .modal-body {
+      padding: 2px;
+    }
+  }
+
 }
