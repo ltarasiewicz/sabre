@@ -61,4 +61,23 @@
     background-color: #62625E;
   }
 
+  .navbar-collapse.collapsing,
+  .navbar-collapse.collapse.in {
+
+    ul li {
+      margin-right: 0;
+      a {
+        margin: 5px 0px;
+      }
+    }
+
+    ul.dropdown-menu li a {
+      color: #cfcec3;
+    }
+  }
+
+
+
+
+
 }

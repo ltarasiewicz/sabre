@@ -70,31 +70,17 @@
                     });
                 });
 
-                //$("#homepage-media-slider li > img").on('mouseenter', function() {
-                //    var ele = $(this);
-                //    var eleSrc = $(this).attr('src');
-                //    var overleafImage = $(this).attr('data-overleaf');
-                //    ele.attr('src', overleafImage);
-                //    ele.attr('data-overleaf', eleSrc);
-                //}).on('mouseleave', function() {
-                //    var ele = $(this);
-                //    var eleSrc = $(this).attr('src');
-                //    var overleafImage = $(this).attr('data-overleaf');
-                //    ele.attr('src', overleafImage);
-                //    ele.attr('data-overleaf', eleSrc);
-                //});
+                var sourceSwap = function () {
+                    var $this = $(this);
+                    var newSource = $this.data('alt-src');
+                    $this.data('alt-src', $this.attr('src'));
+                    $this.attr('src', newSource);
+                }
 
-                $("#homepage-media-slider li img").on('mouseenter mouseleave', function(e) {
-                    var ele = $(this);
-                    var eleSrc = $(this).attr('src');
-                    var overleafImage = $(this).attr('data-overleaf');
-                    if (e.type === "mouseenter" && overleafImage) {
-                        ele.attr('src', overleafImage);
-                        ele.attr('data-overleaf', eleSrc);
-                    } else if (e.type === "mouseleave" && overleafImage) {
-                        ele.attr('src', overleafImage);
-                        ele.attr('data-overleaf', eleSrc);
-                    }
+                $(function() {
+                    $('img[data-alt-src]').each(function() {
+                        new Image().src = $(this).data('alt-src');
+                    }).hover(sourceSwap, sourceSwap);
                 });
 
 

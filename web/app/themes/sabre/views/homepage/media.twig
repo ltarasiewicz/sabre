@@ -9,7 +9,7 @@
         {% for magazineCoverImage in magazineCoverImages %}
         <li>
             <div class="cover-image-wrapper">
-                <img src="{{ magazineCoverImage }}" data-overleaf="{{ homePage.types('magazine-overleaf-image')[loop.index-1] }}" />
+                <img src="{{ magazineCoverImage|resize(500) }}" data-alt-src="{{ homePage.types('magazine-overleaf-image')[loop.index-1]|resize(500) }}" />
             </div>
             <div class="caption-wrap">
                 <div class="caption">{{ homePage.types('magazine-slide-caption')[loop.index-1] }}</div>

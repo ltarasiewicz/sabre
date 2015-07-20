@@ -33,6 +33,34 @@
       width: 100%;
     }
   }
+
+  #metaslider_21 {
+
+    .flex-direction-nav {
+      a {
+        height: 50px;
+        background: url(../images/left.png) no-repeat;
+        background-size: 20px;
+      }
+      a.flex-next {
+        background: url(../images/right.png) no-repeat;
+        background-size: 20px;
+      }
+
+      .flex-prev {
+        left: 10px;
+        opacity: 1;
+        top: 92%;
+      }
+
+      .flex-next {
+        opacity: 1;
+        top: 92%;
+        left: 55px;
+      }
+
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {

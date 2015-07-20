@@ -11,7 +11,7 @@
                     {% set products = page.types('featured-brand-product') %}
                     {% for product in products %}
                     <li>
-                        <img src="{{ product }}" />
+                        <img src="{{ product|resize(500) }}" />
                     </li>
                     {% endfor %}
                 </ul>
