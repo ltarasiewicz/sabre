@@ -18,7 +18,7 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
-    <div class="wrap container" id="<?php if('brand' === get_post_type()) { echo 'brand-page'; } ?>" role="document">
+    <div class="wrap container-fluid" id="<?php if('brand' === get_post_type()) { echo 'brand-page'; } ?>" role="document">
       <div class="content row ">
         <main class="main" role="main">
           <?php include Wrapper\template_path(); ?>
