@@ -25,6 +25,20 @@
   div#footer-content .footer-address-group {
     border-right: 0;
   }
+
+  div#footer-content .footer-right {
+    padding-top: 0;
+  }
+
+  .top .flexslider .flex-direction-nav {
+    .flex-prev {
+      top: 10%;
+    }
+
+    .flex-next {
+      top: 10%;
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {

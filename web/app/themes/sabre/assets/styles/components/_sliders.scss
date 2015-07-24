@@ -45,7 +45,7 @@
     }
 
     .flex-prev {
-      left: 10px;
+      left: 2%;
       opacity: 1;
       top: 90%;
     }
@@ -53,13 +53,13 @@
     .flex-next {
       opacity: 1;
       top: 90%;
-      left: 65px;
+      left: 6%;
     }
   }
 
 
   .flex-control-nav {
-    bottom: 7%;
+    bottom: 8%;
     li {
       vertical-align: middle;
     }
@@ -69,6 +69,7 @@
     z-index: 999;
     text-align: left;
     left: 12%;
+    max-width: 300px;
   }
 
 
@@ -85,5 +86,50 @@
   .flex-control-paging li a.flex-active {
     width: 10px;
     height: 10px;
+  }
+}
+
+.brand-products.flexslider .flex-direction-nav,
+.top .flexslider .flex-direction-nav {
+
+  a {
+    height: 50px;
+    background: url(../images/left.png) no-repeat;
+    &:hover {
+      opacity: 0.5 !important;
+    }
+  }
+
+  a.flex-next {
+    background: url(../images/right.png) no-repeat;
+  }
+
+}
+
+.brand-products.flexslider .flex-direction-nav {
+  .flex-prev {
+    left: 10px;
+    opacity: 1;
+    top: 90%;
+  }
+
+  .flex-next {
+    opacity: 1;
+    top: 90%;
+    left: 65px;
+  }
+}
+
+.top .flexslider .flex-direction-nav {
+  .flex-prev {
+    left: 10px;
+    opacity: 1;
+    top: 5%;
+  }
+
+  .flex-next {
+    opacity: 1;
+    top: 5%;
+    left: 65px;
   }
 }

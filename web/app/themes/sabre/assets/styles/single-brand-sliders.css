@@ -116,22 +116,11 @@
 }
 
 .flex-direction-nav a:before {
-    content: '<';
+    content: '';
     color: #d0cec2;
 }
 .flex-direction-nav a.flex-next:before {
-    content: '>' !important;
-}
-.top .flexslider .flex-direction-nav .flex-prev {
-    left: 10px;
-    opacity: 1;
-    top: 20px
-}
-
-.top .flexslider .flex-direction-nav .flex-next {
-    opacity: 1;
-    top: 20px;
-    left: 35px;
+    content: '' !important;
 }
 
 .bottom .flex-direction-nav a:before {
@@ -142,13 +131,13 @@
     top: 97%
 }
 .bottom .flexslider .flex-direction-nav .flex-prev {
-    left: 45%;
+    left: 40%;
     opacity: 1;
 }
 
 .bottom .flexslider .flex-direction-nav .flex-next {
     opacity: 1;
-    left: 50%;
+    left: 55%;
 }
 
 .bottom .flex-direction-nav a:before {

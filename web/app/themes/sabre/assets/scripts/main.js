@@ -108,8 +108,12 @@
                     });
                 });
                 var applyHeight = function() {
-                    var flexHeight = $(".row.top > .brand-slider").height()
-                    $(".row.top > .brand-aside").height(flexHeight);
+                    if ($(window).width() > 767) {
+                        var flexHeight = $(".row.top > .brand-slider").height()
+                        $(".row.top > .brand-aside").height(flexHeight);
+                    } else {
+                        $(".row.top > .brand-aside").css({'height': 'auto'});
+                    }
                 };
                 $(window).load(function() {
                     applyHeight();

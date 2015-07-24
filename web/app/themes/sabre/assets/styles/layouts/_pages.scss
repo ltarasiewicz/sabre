@@ -180,6 +180,7 @@
 
   .brand-slider {
     text-align: center;
+    padding-left: 0;
     .flexslider {
       margin: 0;
       border: 0;
@@ -188,12 +189,23 @@
   
   .brand-aside {
     overflow: hidden;
+    padding-right: 0;
     .brand-aside-content {
+      display: table;
+      width: 100%;
       color: #d0cec2;
       background-color: #333436;
       text-align: center;
       padding: 10px 0;
       height: 100%;
+      .vertical-centre {
+        display: table-cell;
+        vertical-align: middle;
+        div {
+          position: relative;
+          margin-top: -20%;
+        }
+      }
       a {
         color: inherit;
       }
