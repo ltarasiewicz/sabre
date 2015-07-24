@@ -113,6 +113,7 @@
                         $(".row.top > .brand-aside").height(flexHeight);
                     } else {
                         $(".row.top > .brand-aside").css({'height': 'auto'});
+                        $(".row.top > .brand-aside > .brand-aside-content > .vertical-centre > div").css({"margin": 0});
                     }
                 };
                 $(window).load(function() {
