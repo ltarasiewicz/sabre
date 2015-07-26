@@ -4,6 +4,10 @@ div#footer-content {
   padding-bottom: 10px;
   a {
     color: #333;
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
   }
   img {
     padding: 30px 30px 15px 30px;
@@ -26,6 +30,13 @@ div#footer-content {
   .footer-email {
     color: #fff;
     letter-spacing: 1px;
+    a {
+      color: #fff;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
   }
 
   .footer-address-group {

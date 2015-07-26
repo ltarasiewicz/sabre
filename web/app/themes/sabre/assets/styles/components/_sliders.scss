@@ -39,6 +39,9 @@
     a {
       height: 50px;
       background: url(../images/left.png) no-repeat;
+      &:hover {
+        opacity: 0.5 !important;
+      }
     }
     a.flex-next {
       background: url(../images/right.png) no-repeat;
@@ -89,6 +92,30 @@
   }
 }
 
+#metaslider_43 {
+  .flex-direction-nav {
+    a {
+      background: url(../images/left-chevron.png) no-repeat 0 0;
+      width: 55px;
+      height: 55px;
+      &:hover {
+        opacity: 0.5 !important;
+      }
+    }
+    a.flex-next {
+      background: url(../images/right-chevron.png) no-repeat 0 0;
+    }
+  }
+}
+
+#homepage-media-slider {
+  .flex-direction-nav {
+    a:hover {
+      cursor: pointer !important;
+    }
+  }
+}
+
 .brand-products.flexslider .flex-direction-nav,
 .top .flexslider .flex-direction-nav {
 
@@ -104,6 +131,27 @@
     background: url(../images/right.png) no-repeat;
   }
 
+}
+
+.top .flex-control-nav.flex-control-paging {
+  display: block;
+  z-index: 999;
+  text-align: left;
+  left: 12%;
+  top: 4%;
+  max-width: 300px;
+  li {
+    vertical-align: middle;
+    a {
+      background-color: $oat-meal;
+      width: 5px;
+      height: 5px;
+      &.flex-active {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
 }
 
 .brand-products.flexslider .flex-direction-nav {

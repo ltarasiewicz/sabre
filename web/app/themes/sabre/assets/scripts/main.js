@@ -53,7 +53,7 @@
                     $('#homepage-media-slider').flexslider({
                         slideshowSpeed:3000,
                         animation:'slide',
-                        controlNav:false,
+                        controlNav:true,
                         directionNav:true,
                         pauseOnHover:true,
                         direction:'horizontal',
@@ -62,7 +62,7 @@
                         prevText:"&lt;",
                         nextText:"&gt;",
                         easing:"linear",
-                        slideshow:false,
+                        slideshow:true,
                         maxItems:3,
                         itemWidth:180,
                         minItems:1,
@@ -101,6 +101,7 @@
                 $(window).load(function() {
                     $('.flexslider').flexslider({
                         slideshowSpeed:3000,
+                        controlNav:true,
                         animation:"fade",
                         prevText: '',
                         nextText: ''

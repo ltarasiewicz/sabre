@@ -43,7 +43,7 @@
   }
 
   div.generic-page {
-    background-color: #333;
+    background-color: $sabre-dark-grey;
     color: #cfcec3;
     text-align: center;
     &.bordered {
@@ -64,7 +64,7 @@
   div.title-strap {
     text-align: center;
     height: 55px;
-    background-color: #cfcec3;
+    background-color: $oat-meal;
     h1, h2 {
       line-height: 55px;
       margin: 0;
@@ -84,6 +84,9 @@
       right: 0;
       font-size: 60px;
       cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 
@@ -287,6 +290,21 @@
   .brand-content,
   .brand-products {
     padding: 0 15px;
+  }
+
+  .brand-content {
+    margin-top: 6%;
+  }
+
+  a {
+    img {
+      &[alt=instagram]:hover,
+      &[alt=twitter]:hover,
+      &[alt=pinterest]:hover,
+      &[alt=facebook]:hover {
+        opacity: 0.5;
+      }
+    }
   }
 
 }
