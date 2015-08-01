@@ -18,13 +18,18 @@
         // All pages
         'common': {
             init: function () {
-                //JavaScript to be fired on all pages
-                //var offset = 95;
-                //$(".navbar li a:not(.not-spy)").click(function(event) {
-                //    event.preventDefault();
-                //    $($(this).attr('href'))[0].scrollIntoView();
-                //    scrollBy(0, -offset);
-                //});
+                $(".dropdown-menu > li > a.trigger").on("click",function(e){
+                    var current=$(this).next();
+                    var grandparent=$(this).parent().parent();
+                    grandparent.find(".sub-menu:visible").not(current).hide();
+                    current.toggle();
+                    e.stopPropagation();
+                    e.preventDefault();
+                });
+                $(".dropdown-menu > li > a:not(.trigger)").on("click",function(e){
+                    var root=$(this).closest('.dropdown');
+                    root.find('.sub-menu:visible').hide();
+                });
 
             },
             finalize: function () {
@@ -83,6 +88,9 @@
                     }).hover(sourceSwap, sourceSwap);
                 });
 
+                lightbox.option({
+                   'maxWidth': 1200
+                });
 
             },
             finalize: function () {

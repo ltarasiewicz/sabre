@@ -10,7 +10,16 @@ $context['hasTitleStrap'] = $hasTitleStrap;
 $context['homePage'] = false;
 $context['educators_page'] = new TimberPost(get_page_by_title('Education'));
 $context['header_image'] = get_header_image();
-$context['brands'] = Timber::get_posts(array('post_type' => 'brand', 'posts_per_page' => -1));
+$context['brands_australia'] = Timber::get_posts(array(
+                                'post_type' => 'brand',
+                                'posts_per_page' => -1,
+                                'category_name' => 'australia'
+                            ), 'SabrePost');
+$context['brands_new_zeland'] = Timber::get_posts(array(
+    'post_type' => 'brand',
+    'posts_per_page' => -1,
+    'category_name' => 'new-zeland'
+), 'SabrePost');
 $context['page_title'] = get_the_title();
 
 if (is_front_page()) {

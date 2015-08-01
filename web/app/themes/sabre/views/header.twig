@@ -20,12 +20,32 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{ home_url }}#about">ABOUT</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle not-spy" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">OUR BRANDS<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        {% for brand in brands %}
-                            <li><a href="{{ brand.permalink }}">{{ brand }}</a></li>
-                        {% endfor %}
+                        <li class="dropdown">
+                            <a href="#" class="trigger" role="button">
+                                BRANDS IN AUSTRALIA
+                                <span class="caret right"></span>
+                            </a>
+                            <ul class="dropdown-menu sub-menu">
+                                {% for brand_au in brands_australia %}
+                                    <li><a href="{{ brand_au.permalink }}">{{ brand_au }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="trigger" role="button">
+                                BRANDS IN NEW ZELAND
+                                <span class="caret right"></span>
+                            </a>
+                            <ul class="dropdown-menu sub-menu">
+                                {% for brand_nz in brands_new_zeland %}
+                                    <li><a href="{{ brand_nz.permalink }}">{{ brand_nz }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+
                     </ul>
                 </li>
                 <li><a href="{{ educators_page.permalink }}">EDUCATION</a></li>

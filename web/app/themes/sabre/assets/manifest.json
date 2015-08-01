@@ -31,6 +31,12 @@
     },
     "jquery.flexslider.js": {
       "files": ["scripts/jquery.flexslider.js"]
+    },
+    "lightbox2.js": {
+      "bower": ["lightbox2"]
+    },
+    "lightbox.css": {
+      "files": ["../bower_components/lightbox2/dist/css/lightbox.css"]
     }
   },
   "config": {

@@ -9,7 +9,8 @@
   "dependencies": {
     "modernizr": "2.8.2",
     "bootstrap-sass-official": "3.3.5",
-    "fontawesome": "~4.3.0"
+    "fontawesome": "~4.3.0",
+    "lightbox2": "~2.8.1"
   },
   "overrides": {
     "modernizr": {
