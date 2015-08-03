@@ -26,7 +26,7 @@ $context['video_3_id'] = $videoThreeId[1];
 
 $context['about_page'] = new TimberPost(get_page_by_title('About'));
 $context['education_page'] = new TimberPost(get_page_by_title('Education'));
-$context['brands'] = Timber::get_posts(array('post_type' => 'brand'));
+$context['brands'] = Timber::get_posts(array('post_type' => 'brand', 'posts_per_page' => -1));
 
 $context['homePage'] = Timber::get_post(get_page_by_title('Homepage'), 'SabrePost');
 

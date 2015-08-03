@@ -13,7 +13,7 @@ $address = function() use ($reduxOptions) {
 
 $context['address'] = $address();
 $context['header_image'] = get_header_image();
-$context['brands'] = Timber::get_posts(array('post_type' => 'brand'));
+$context['brands'] = Timber::get_posts(array('post_type' => 'brand', 'posts_per_page' => -1));
 $context['helper_pages'] = Timber::get_posts(array('post_type' => 'page', 'post__in' => array(89, 91)));
 $context['educators_page'] = new TimberPost(get_page_by_title('Education'));
 
