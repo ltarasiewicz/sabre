@@ -220,6 +220,15 @@
 
   .flexslider.brand-products {
     margin-bottom: 0;
+    .slides > li {
+      img {
+        max-height: 500px;
+        max-width: 100%;
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+
   }
 
   .row.bottom > .brand-slider {
