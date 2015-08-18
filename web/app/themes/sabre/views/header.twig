@@ -59,7 +59,7 @@
     {% if hasTitleStrap %}
         {% if is_brand_page %}
             <div class="title-strap">
-                <h1 class="text-uppercase"><img src="{{ current_brand.thumbnail.src }}"/></h1>
+                <h1 class="text-uppercase"><img src="{{ current_brand.thumbnail.src('medium') }}"/></h1>
             </div>
         {% else %}
             <div class="title-strap">
