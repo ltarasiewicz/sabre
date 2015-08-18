@@ -4,7 +4,7 @@ $reduxOptions = get_option('sabre_redux');
 $address = function() use ($reduxOptions) {
     $arr = [];
     foreach ($reduxOptions as $key => $value) {
-        if (preg_match('/(address-1|address-2|primary-email)/', $key)) {
+        if (preg_match('/(address-1|address-2|primary-email|footer-logo)/', $key)) {
             $arr[$key] = $value;
         }
     }

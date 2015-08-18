@@ -57,9 +57,15 @@
             </div>
     </nav>
     {% if hasTitleStrap %}
-        <div class="title-strap">
-            <h1 class="text-uppercase">{{ page_title }}</h1>
-        </div>
+        {% if is_brand_page %}
+            <div class="title-strap">
+                <h1 class="text-uppercase"><img src="{{ current_brand.thumbnail.src }}"/></h1>
+            </div>
+        {% else %}
+            <div class="title-strap">
+                <h1 class="text-uppercase">{{ page_title }}</h1>
+            </div>
+        {% endif %}
     {% endif %}
     {{ homePage.metaslider_shortcode|shortcodes }}
 </div><!-- /.container-->

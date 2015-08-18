@@ -22,6 +22,11 @@ $context['brands_new_zeland'] = Timber::get_posts(array(
 ), 'SabrePost');
 $context['page_title'] = get_the_title();
 
+if ('brand' == get_post_type()) {
+    $context['is_brand_page'] = true;
+    $context['current_brand'] = new TimberPost();
+}
+
 if (is_front_page()) {
     $context['homePage'] = get_post();
 }
