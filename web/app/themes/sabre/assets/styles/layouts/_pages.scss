@@ -210,6 +210,10 @@
         div {
           position: relative;
           margin-top: -20%;
+          img {
+            filter: invert(1);
+            -webkit-filter: invert(1);
+          }
         }
       }
       a {
@@ -301,7 +305,7 @@
 
   .brand-content,
   .brand-products {
-    padding: 0 15px;
+    padding: 0 30px;
   }
 
   .brand-content {

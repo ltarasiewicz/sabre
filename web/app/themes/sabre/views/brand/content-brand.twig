@@ -1,5 +1,5 @@
-    <div class="row reduced-padding bottom">
-        <div class="content-container-wide">
+<div class="row reduced-padding bottom">
+
         <div class="col-sm-8 brand-slider">
             <div class="brand-content">
                 <h1>{{ page.title }}</h1>
@@ -11,12 +11,12 @@
                 <ul class="slides">
                     {% set products = page.types('featured-brand-product') %}
                     {% for product in products %}
-                    <li>
-                        <img src="{{ product|resize(500) }}" />
-                    </li>
+                        <li>
+                            <img src="{{ product|resize(500) }}"/>
+                        </li>
                     {% endfor %}
                 </ul>
             </div>
         </div>
+
 </div>
-    </div>

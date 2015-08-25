@@ -11,6 +11,7 @@ foreach($brandBannersArr as $singleBanner) {
 }
 $context['banners'] = $brandBanners;
 
+$context['current_brand'] = new TimberPost();
 
 Timber::render('single-brand.twig', $context);
 
