@@ -37,3 +37,25 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+
+function sabreSortMenuItems(array $items, array $order)
+{
+    $items = array_map('strtolower', $items);
+    $order = array_map('strtolower', $order);
+
+    $ordered = $items;
+
+
+    array_walk($items, function($v, $k, $order) use (&$ordered){
+        if ($v != $order[$k]) {
+            array_shift($ordered);
+            array_push($ordered, $v);
+            echo 'P';
+        }
+
+    }, $order);
+
+    var_dump($ordered);
+
+}

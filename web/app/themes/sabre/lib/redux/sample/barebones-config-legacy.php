@@ -189,6 +189,18 @@
                             'title'    => 'Video 3 Caption',
                             'compiler' => 'true',
                         ),
+                        array(
+                            'id'       => 'video-4-src',
+                            'type'     => 'text',
+                            'title'    => 'Video 4 Source',
+                            'compiler' => 'true',
+                        ),
+                        array(
+                            'id'       => 'video-4-caption',
+                            'type'     => 'text',
+                            'title'    => 'Video 4 Caption',
+                            'compiler' => 'true',
+                        )
                     )
                 );
 

@@ -20,6 +20,7 @@ $sage_includes = [
     'lib/extras.php',                // Custom functions
     'lib/metaslider.php',            // Metaslider settings
     'lib/extensions.php',            // Extensions, custom classes, e.g. Timber Extenstions
+    'lib/abstraction/MenuOrder.php'  // Class that holds definition of menu items order for AU and NZ
 ];
 
 foreach ($sage_includes as $file) {

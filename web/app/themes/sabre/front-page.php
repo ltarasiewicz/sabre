@@ -7,7 +7,7 @@ $reduxOptions = get_option('sabre_redux');
 $video = function() use ($reduxOptions) {
     $arr = [];
     foreach ($reduxOptions as $key => $value) {
-        if (preg_match('/(video-1|video-2|video-3)/', $key)) {
+        if (preg_match('/(video-1|video-2|video-3|video-4)/', $key)) {
             $arr[$key] = $value;
         }
     }
@@ -18,10 +18,12 @@ $context['video'] = $video();
 preg_match('/embed\/(.+)$/', $context['video']['video-1-src'], $videoOneId);
 preg_match('/embed\/(.+)$/', $context['video']['video-2-src'], $videoTwoId);
 preg_match('/embed\/(.+)$/', $context['video']['video-3-src'], $videoThreeId);
+preg_match('/embed\/(.+)$/', $context['video']['video-4-src'], $videoFourId);
 
 $context['video_1_id'] = $videoOneId[1];
 $context['video_2_id'] = $videoTwoId[1];
 $context['video_3_id'] = $videoThreeId[1];
+$context['video_4_id'] = $videoFourId[1];
 
 
 $context['about_page'] = new TimberPost(get_page_by_title('About'));

@@ -34,8 +34,10 @@
         display: inline-block;
         
         img {
-            vertical-align: middle;
-            max-height: 60px;
+          vertical-align: middle;
+          max-height: 80px;
+          position: relative;
+          top: -12px;
         }
 
     }
@@ -77,7 +79,7 @@
   div.embedded-video {
     i {
       width: 50%;
-      height: 38%;
+      height: 30%;
       overflow: auto;
       margin: auto;
       position: absolute;
