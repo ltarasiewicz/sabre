@@ -6,7 +6,7 @@
 abstract class MenuOrder
 {
     private static $auMenuOrder = ['Joico', 'Fudge', 'Solfine Crema Color', 'Hanz de Fuko', 'Vitaman', 'Villa Lodola'];
-    private static $nzMenuOrder = ['Joico', 'iColor', 'ISO', 'Hanz de Fuko', 'ColorFix', 'Quantum'];
+    private static $nzMenuOrder = ['Joico', 'iColor', 'ISO', 'Hanz de Fuko', 'ColorFix', 'Senscience Proformance', 'Quantum'];
 
     public static function getAuMenuOrder()
     {

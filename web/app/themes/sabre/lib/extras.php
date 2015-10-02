@@ -39,23 +39,13 @@ function excerpt_more() {
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
 
-function sabreSortMenuItems(array $items, array $order)
+function sabreSortMenuItems($template, $myArray, &$ordered)
 {
-    $items = array_map('strtolower', $items);
-    $order = array_map('strtolower', $order);
-
-    $ordered = $items;
-
-
-    array_walk($items, function($v, $k, $order) use (&$ordered){
-        if ($v != $order[$k]) {
-            array_shift($ordered);
-            array_push($ordered, $v);
-            echo 'P';
+    foreach($myArray as $k => $v) {
+        if (strtolower($myArray[$k]->name) == strtolower($template[0])) {
+            $ordered[] = $myArray[$k];
+            array_splice($template, 0, 1);
         }
-
-    }, $order);
-
-    var_dump($ordered);
-
+    }
+    if (!empty($template)) sabreSortMenuItems($template, $myArray, $ordered);
 }

@@ -11,25 +11,30 @@ $context['hasTitleStrap'] = $hasTitleStrap;
 $context['homePage'] = false;
 $context['educators_page'] = new TimberPost(get_page_by_title('Education'));
 $context['header_image'] = get_header_image();
+$context['page_title'] = get_the_title();
 
-$context['brands_australia'] = Timber::get_posts(array(
+$auMenuItems = Timber::get_posts(array(
                                 'post_type' => 'brand',
                                 'posts_per_page' => -1,
                                 'category_name' => 'australia'
                             ), 'SabrePost');
-$context['brands_new_zeland'] = Timber::get_posts(array(
+$nzMenuItems = Timber::get_posts(array(
     'post_type' => 'brand',
     'posts_per_page' => -1,
     'category_name' => 'new-zealand'
 ), 'SabrePost');
-$context['page_title'] = get_the_title();
 
-//$myArr = ['Dog', 'Cat', 'Giraffe', 'Shark'];
-//$orderArr = ['Giraffe', 'Dog', 'Shark', 'Cat'];
-//
-//Extras\sabreSortMenuItems($myArr, $orderArr);
+/** Sort menu items based on the provided order teamplate */
+$auOrdered = [];
+$nzOrdered = [];
+Extras\sabreSortMenuItems(MenuOrder::getAuMenuOrder(), $auMenuItems, $auOrdered);
+Extras\sabreSortMenuItems(MenuOrder::getNzMenuOrder(), $nzMenuItems, $nzOrdered);
 
 if (is_front_page()) {
     $context['homePage'] = get_post();
 }
+
+$context['brands_australia'] = $auOrdered;
+$context['brands_new_zeland'] = $nzOrdered;
+
 Timber::render('header.twig', $context);
