@@ -13,7 +13,7 @@
   .navbar-nav > li > a {
     color: #cfcec3;
     padding: 7px 14px;
-    margin: 28px 0px;
+    margin: 18px 0px;
   }
 
   .navbar-collapse {
@@ -24,6 +24,7 @@
     margin-bottom: 0;
     border: none; // reset navbar border styles
     border-bottom: 3px solid #fff;
+    min-height: 73px;
     .caret {
       margin-left: 5px;
       margin-bottom: 5px;
@@ -35,9 +36,10 @@
   }
 
   .navbar-brand {
-    padding: 15px 50px;
+    padding: 13px 50px;
+    height: 73px;
     img {
-      max-width: 180px;
+      max-width: 150px;
     }
   }
 

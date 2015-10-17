@@ -1,4 +1,4 @@
-set :application, 'sabrecorp.com.au'
+set :application, 'sabre.tarasiewicz.net'
 set :repo_url, 'git@github.com:ltarasiewicz/sabre.git'
 
 # Branch options
