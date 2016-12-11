@@ -22,7 +22,7 @@ $auMenuItems = Timber::get_posts(array(
 $nzMenuItems = Timber::get_posts(array(
     'post_type' => 'brand',
     'posts_per_page' => -1,
-    'category_name' => 'new-zeland'
+    'category_name' => 'new-zealand'
 ), 'SabrePost');
 
 if (is_front_page()) {
