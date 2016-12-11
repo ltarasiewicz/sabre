@@ -15,27 +15,21 @@ $context['header_image'] = get_header_image();
 $context['page_title'] = get_the_title();
 
 $auMenuItems = Timber::get_posts(array(
-                                'post_type' => 'brand',
-                                'posts_per_page' => -1,
-                                'category_name' => 'australia'
-                            ), 'SabrePost');
+                            'post_type' => 'brand',
+                            'posts_per_page' => -1,
+                            'category_name' => 'australia'
+                        ), 'SabrePost');
 $nzMenuItems = Timber::get_posts(array(
     'post_type' => 'brand',
     'posts_per_page' => -1,
-    'category_name' => 'new-zealand'
+    'category_name' => 'new-zeland'
 ), 'SabrePost');
-
-/** Sort menu items based on the provided order teamplate */
-$auOrdered = [];
-$nzOrdered = [];
-Extras\sabreSortMenuItems(MenuOrder::getAuMenuOrder(), $auMenuItems, $auOrdered);
-Extras\sabreSortMenuItems(MenuOrder::getNzMenuOrder(), $nzMenuItems, $nzOrdered);
 
 if (is_front_page()) {
     $context['homePage'] = get_post();
 }
 
-$context['brands_australia'] = $auOrdered;
-$context['brands_new_zeland'] = $nzOrdered;
+$context['brands_australia'] = $auMenuItems;
+$context['brands_new_zeland'] = $nzMenuItems;
 
 Timber::render('header.twig', $context);

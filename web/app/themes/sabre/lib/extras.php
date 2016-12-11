@@ -48,4 +48,6 @@ function sabreSortMenuItems($template, $myArray, &$ordered)
         }
     }
     if (!empty($template)) sabreSortMenuItems($template, $myArray, $ordered);
+
+    $ordered = $myArray; // disable this method
 }
