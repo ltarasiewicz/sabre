@@ -32,6 +32,9 @@
     "jquery.flexslider.js": {
       "files": ["scripts/jquery.flexslider.js"]
     },
+    "jquery.tablesorter.js": {
+      "files": ["scripts/jquery.tablesorter.js"]
+    },
     "lightbox2.js": {
       "bower": ["lightbox2"]
     },

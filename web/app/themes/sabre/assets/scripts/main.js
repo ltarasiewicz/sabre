@@ -103,6 +103,15 @@
                 // JavaScript to be fired on the about us page
             }
         },
+        'education_programs': {
+            init: function () {
+                $(document).ready(function() {
+                    $(function(){
+                        $(".event-table").tablesorter();
+                    });
+                });
+            }
+        },
         'single_brand': {
             init: function () {
 

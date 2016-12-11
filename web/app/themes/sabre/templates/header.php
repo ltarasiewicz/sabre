@@ -10,6 +10,7 @@ $context['home_url'] = get_home_url();
 $context['hasTitleStrap'] = $hasTitleStrap;
 $context['homePage'] = false;
 $context['educators_page'] = new TimberPost(get_page_by_title('Education'));
+$context['education_programs'] = new TimberPost(get_page_by_title('Education Programs'));
 $context['header_image'] = get_header_image();
 $context['page_title'] = get_the_title();
 

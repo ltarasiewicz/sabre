@@ -1,0 +1,34 @@
+<div class="content-container-wide">
+    <img id="education-program-banner" class="img-responsive" src="{{ page.types('workshops-banner') }}"/>
+    <h1 class="text-center">Sabre Academy Education</h1>
+    <p id="brochure-download-link" class="text-center"><a href="{{ page.types('education-brochure') }}" download="sabre-education-brochure">Download Sabre Education Brochure></a></p>
+    {% for postcode, workshopsInPostcode in workshops %}
+    <h2 class="postcode-header text-center" class="text-center">{{ postcode }}</h2>
+    <table class="event-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th class="clickable"><i class="glyphicon glyphicon-sort"></i>Course</th>
+                <th>Time</th>
+                <th class="clickable"><i class="glyphicon glyphicon-sort"></i>Brand</th>
+                <th class="clickable"><i class="glyphicon glyphicon-sort"></i>Region</th>
+                <th>Join</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%  for workshop in workshopsInPostcode if postcode in workshop.terms('postcode') %}
+            <tr>
+                <td>{{ workshop.types('workshop-date')|seconds_to_date('D jS M Y') }}</td>
+                <td>{{ workshop.post_title }}</td>
+                <td>{{ workshop.types('hours') }}</td>
+                <td>{{ workshop.terms('brand')|join(', ') }}</td>
+                <td>{{ workshop.terms('region')|join(', ') }}</td>
+                <td>
+                    <a target="_blank" href="{{ workshop.types('singup-link') }}" type="button" class="btn btn-default">BOOK HERE</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endfor %}
+</div>
