@@ -10,7 +10,6 @@
                 <th>Date</th>
                 <th class="clickable"><i class="glyphicon glyphicon-sort"></i>Course</th>
                 <th>Time</th>
-                <th class="clickable"><i class="glyphicon glyphicon-sort"></i>Brand</th>
                 <th class="clickable"><i class="glyphicon glyphicon-sort"></i>Region</th>
                 <th>Join</th>
             </tr>
@@ -21,7 +20,6 @@
                 <td>{{ workshop.types('workshop-date')|seconds_to_date('D jS M Y') }}</td>
                 <td>{{ workshop.post_title }}</td>
                 <td>{{ workshop.types('hours') }}</td>
-                <td>{{ workshop.terms('brand')|join(', ') }}</td>
                 <td>{{ workshop.terms('region')|join(', ') }}</td>
                 <td>
                     <a target="_blank" href="{{ workshop.types('singup-link') }}" type="button" class="btn btn-default">BOOK HERE</a>

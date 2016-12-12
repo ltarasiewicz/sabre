@@ -48,8 +48,19 @@
 
                     </ul>
                 </li>
-                <li><a href="{{ education_programs.permalink }}">EDUCATION PROGRAMS</a></li>
-                <li><a href="{{ educators_page.permalink }}">EDUCATION</a></li>
+
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">EDUCATION<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ educators_page.permalink }}">ARTISTS & EDUCATORS</a></li>
+                        <li><a href="{{ education_programs.permalink }}">EDUCATION PROGRAMS</a></li>
+
+                    </ul>
+                </li>
+
                 <li><a href="{{ home_url }}#media">MEDIA</a></li>
                 <li><a href="{{ home_url }}#videos">VIDEOS</a></li>
                 <li><a href="{{ home_url }}#videos">CONTACT</a></li>
