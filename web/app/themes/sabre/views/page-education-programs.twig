@@ -1,7 +1,11 @@
 <div class="content-container-wide">
     <img id="education-program-banner" class="img-responsive" src="{{ page.types('workshops-banner') }}"/>
     <h1 class="text-center">Sabre Academy Education</h1>
-    <p id="brochure-download-link" class="text-center"><a href="{{ page.types('education-brochure') }}" download="sabre-education-brochure">Download Sabre Education Brochure></a></p>
+    <p id="brochure-download-link" class="text-center">
+        <a href="{{ page.types('education-brochure-au') }}" download="sabre-au-education-brochure">Download the Sabre Australia Education Brochure></a><br/>
+        <a href="{{ page.types('education-brochure-nz') }}" download="sabre-nz-education-brochure">Download the Sabre New Zealand Education Brochure></a>
+    </p>
+
     {% for postcode, workshopsInPostcode in workshops %}
     <h2 class="postcode-header text-center" class="text-center">{{ postcode }}</h2>
     <table class="event-table">
